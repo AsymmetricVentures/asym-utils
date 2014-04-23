@@ -31,7 +31,7 @@ License :: OSI Approved :: GNU General Public License v2 (GPLv2)
 Topic :: Software Development :: Libraries :: Application Frameworks
 """
 
-version = '0.1.1'
+version = '0.1.2'
 url = 'https://github.com/AsymmetricVentures/asym-utils'
 
 setup(
@@ -53,6 +53,8 @@ setup(
 		'jinja2>=2.7',
 		'pytz',  # most recent
 		'hamlpy',  # most recent,
+		
+		'asymmetricbase.fields',
 	),
 	
 	package_dir = {
