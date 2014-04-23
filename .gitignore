@@ -52,3 +52,5 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
+.settings
+asymmetricbase.utils.egg-info
