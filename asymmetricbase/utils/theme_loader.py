@@ -10,7 +10,7 @@ from jinja2.exceptions import TemplateNotFound
 from jinja2.loaders import split_template_path, BaseLoader
 from jinja2.utils import open_if_exists, internalcode
 
-try:
+if sys.version_info[0] < 3:
 	from hamlpy import hamlpy
 	from hamlpy import nodes as hamlpynodes
 	
@@ -25,7 +25,7 @@ try:
 	hamlpynodes.TagNode.may_contain.update({
 		'for' : 'else',
 	})
-except ImportError:
+else:
 	# hamlpy doesn't work in python3
 	hamlpy = None
 
