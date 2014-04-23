@@ -32,7 +32,7 @@ Topic :: Software Development :: Libraries :: Application Frameworks
 """
 
 version = '0.1.0'
-url = 'https://github.com/AsymmetricVentures/asym-utils',
+url = 'https://github.com/AsymmetricVentures/asym-utils'
 
 setup(
 	name = 'asymmetricbase.utils',
