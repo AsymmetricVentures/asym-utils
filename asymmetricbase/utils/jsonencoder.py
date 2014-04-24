@@ -17,12 +17,13 @@
 
 from __future__ import absolute_import, division, print_function, unicode_literals
 
-import types
-
 from django.core.serializers.json import DjangoJSONEncoder
 from django.db.models.query import QuerySet
-
-from .enum import EnumItem
+import types
+try:
+	from asymmetricbase.enum import EnumItem
+except ImportError:
+	EnumItem = None
 
 class AsymJSONEncoder(DjangoJSONEncoder):
 	
@@ -39,7 +40,7 @@ class AsymJSONEncoder(DjangoJSONEncoder):
 			except ImportError:
 				pass
 			return str(o)
-		elif isinstance(o, EnumItem):
+		elif EnumItem is not None and isinstance(o, EnumItem):
 			return int(o)
 		else:
 			return super(AsymJSONEncoder, self).default(o)

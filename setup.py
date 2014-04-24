@@ -31,7 +31,7 @@ License :: OSI Approved :: GNU General Public License v2 (GPLv2)
 Topic :: Software Development :: Libraries :: Application Frameworks
 """
 
-version = '0.1.3'
+version = '0.1.4'
 url = 'https://github.com/AsymmetricVentures/asym-utils'
 
 setup(
@@ -56,6 +56,10 @@ setup(
 		
 		'asymmetricbase.fields',
 	),
+	
+	extras_require = {
+		'with_enum': ['asymmetricbase.enum'],
+	},
 	
 	package_dir = {
 		'asymmetricbase' : 	'asymmetricbase',
